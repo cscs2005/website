@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Pancake party</title>
+  <link rel="icon" type="image/png" href="BUTTER.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      background: #fff2f2;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 900px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .section img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .section .text {
+      flex: 1;
+    }
+
+    .section .text h3 {
+      margin-top: 0;
+      color: #111;
+    }
+
+    .section .text p {
+      color: #444;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .section .text h3 {
+  margin-top: 0;
+  color: #111;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #ffb74d;
+  display: block;      /* 讓線條可以延伸整行 */
+  width: 100%;          /* 線條長度，可改成 100% 或其他百分比 */
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section img {
+        width: 80%;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pancake party</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>🍯 About Pancake party</h2>
+    <p>Discover the story behind our delicious pancakes and our passion for creating sweet moments.</p>
+  </section>
+
+  <main>
+    <div class="content">
+
+      <div class="section">
+        <img src="BUTTER.png" alt="Our Story">
+        <div class="text">
+          <h3>Our Story</h3>
+          <p>Pancake.party was founded to bring happiness through food. From humble beginnings to a beloved community favorite, our story is one of creativity and flavor.</p>
+          </div>
+       </div>
+
+      <div class="section">
+        <img src="store.jpg" alt="Our Store">
+        <div class="text">
+          <h3>Our Story</h3>
+          <p>Pancake.party was founded to bring happiness through food. From humble beginnings to a beloved community favorite, our story is one of creativity and flavor.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Buttercat Official.</p>
+    <p><a href="#">Privacy & Terms</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

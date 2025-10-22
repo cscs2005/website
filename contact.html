@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Pancake party</title>
+  <link rel="icon" type="image/png" href="BUTTER.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+      background: #fff2f2;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    form label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-bottom: 10px;
+      resize: none;
+    }
+
+    form button {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #444;
+    }
+
+    main h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pancake party</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>📬 Get in Touch</h2>
+    <p>Have questions or want to collaborate?  Contact us at anytime.</p>
+  </section>
+
+<main>
+  <form action="send_email.php" method="post">
+    <h3>Contact Form</h3>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+
+    <!-- ✅ 這裡要加上 < -->
+    <button type="button" id="sendBtn">Send Message</button>
+  </form>
+</main>
+
+<script>
+document.getElementById('sendBtn').addEventListener('click', function() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // 檢查是否有空欄位
+  if (!name || !email || !message) {
+    alert('Please fill in all fields before sending!');
+  } else {
+    alert('Message sent! Redirecting to Contact page...');
+    // 模擬跳轉
+    setTimeout(() => {
+      window.location.href = 'contact.html';
+    }, 1500);
+  }
+});
+</script>
+
+<footer>
+  <p>© <span id="year"></span> Buttercat Official.</p>
+  <p><a href="#">Privacy & Terms</a></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>

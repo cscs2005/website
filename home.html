@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Pancake party</title>
+  <link rel="icon" type="image/png" href="BUTTER.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 美化主要內容區 */
+    main {
+      background: #fff2f2;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 800px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .content h3 {
+      margin-top: 20px;
+      color: #111;
+    }
+
+    .content p {
+      margin-top: 10px;
+      line-height: 1.6;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pancake party</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>🥞 Fresh Pancakes, Sweet Moments</h2>
+    <p>Join us at Pancake party — where every stack tells a story.</p>
+  </section>
+
+  <main>
+    <div class="content">
+      <h3>Welcome to Our Pancake Paradise!</h3>
+      <p>Explore delicious recipes, exciting events, and all things pancakes. Our mission is to bring joy and flavor to every table through our freshly made pancakes.</p>
+      <p>Check out our About page to learn more about our story and meet the team that makes it all happen!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Buttercat Official.</p>
+    <p><a href="#">Privacy & Terms</a></p>
+  </footer>
+
+  <script>
+    // 顯示今年年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 🕵️‍♂️ 隱藏密碼輸入觸發轉跳
+    let input = "";
+    const secret = "uda"; // 密碼（可改）
+
+    document.addEventListener("keydown", function(event) {
+      // 忽略控制鍵
+      if (event.key.length === 1) {
+        input += event.key.toLowerCase();
+
+        // 保留最後幾個字母
+        if (input.length > secret.length) {
+          input = input.slice(-secret.length);
+        }
+
+        // 當輸入正確密碼 → 跳轉
+        if (input === secret) {
+          window.location.href = "welecome.html";
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News - Pancake party</title>
+  <link rel="icon" type="image/png" href="BUTTER.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      background: #fff2f2;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 900px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .news-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .news-card {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: #fff8f8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .news-card img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .news-text {
+      flex: 1;
+    }
+
+    .news-text h3 {
+      margin-top: 0;
+      color: #111;
+      padding-bottom: 6px;
+      border-bottom: 3px solid #ffb74d;
+      display: block;
+      width: 100%;
+    }
+
+    .news-text .date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .news-text p {
+      color: #444;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .news-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .news-card img {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pancake party</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>📰 Latest News & Updates</h2>
+    <p>Stay updated with our newest events, releases, and announcements.</p>
+  </section>
+
+  <main>
+    <div class="content">
+      <div class="news-section">
+        <div class="news-card">
+          <img src="photo-161170090-612x612.jpg" alt="News 1">
+          <div class="news-text">
+            <h3>Buttercat Pancake Festival Starts!</h3>
+            <div class="date">October 21, 2025</div>
+            <p>Join us for the annual Pancake Festival! Enjoy exclusive flavors, workshops, and community events. Don't miss out!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="360_F_286956734_YJef03AMjV8FSbyGNL1RxUOAjkmjC0Za.jpg" alt="News 2">
+          <div class="news-text">
+            <h3>New Seasonal Menu Released</h3>
+            <div class="date">October 10, 2024</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="chocolate-pancakes-2.jpg" alt="News 3">
+          <div class="news-text">
+            <h3>Community Meetup Highlights</h3>
+            <div class="date">February 24, 2024</div>
+            <p>Our recent meetup in Taipei was a success! Creators and pancake lovers shared tips, fun activities, and new recipes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Buttercat Official.</p>
+    <p><a href="#">Privacy & Terms</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
