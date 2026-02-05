@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News - Pancake party</title>
+  <link rel="icon" type="image/png" href="BUTTER.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      background: #fff2f2;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 900px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .news-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .news-card {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: #fff8f8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .news-card img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .news-text {
+      flex: 1;
+    }
+
+    .news-text h3 {
+      margin-top: 0;
+      color: #111;
+      padding-bottom: 6px;
+      border-bottom: 3px solid #ffb74d;
+      display: block;
+      width: 100%;
+    }
+
+    .news-text .date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .news-text p {
+      color: #444;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .news-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .news-card img {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pancake party</h1>
+  </header>
+
+  <nav>
+    <a href="homeuda.html">Home</a>
+    <a href="ongezellig.html">Ongezellig</a>
+    <a href="newsuda.html">News UDA</a>
+    <a href="aboutuda.html">About Us</a>
+    <a href="contactuda.html">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>🧇Ongezellig</h2>
+    <p>The time has come to rise as one fandom under the glorious banner of Japsterdam!</p>
+  </section>
+
+  <main>
+    <div class="content">
+      <div class="news-section">
+        <div class="news-card">
+          <img src="S__4104209.jpg">
+          <div class="news-text">
+            <h3>Hitler was right!</h3>
+            <div class="date">February 5, 2026</div>
+            <p>Hitler was right to kill this bunch of pedophiles and Jews. If he had won WWII, this would never have happened. Jews will not control the world and epstein will never exist. He was just a victim who died in WWII.</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="S__4104210">
+          <div class="news-text">
+            <h3>New Seasonal Menu Released</h3>
+            <div class="date">October 10, 2024</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="S__4104211.jpg">
+          <div class="news-text">
+            <h3>New Seasonal Menu Released</h3>
+            <div class="date">October 10, 2024</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="S__4104212.jpg">
+          <div class="news-text">
+            <h3>New Seasonal Menu Released</h3>
+            <div class="date">October 10, 2024</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="S__4104213.jpg">
+          <div class="news-text">
+            <h3>New Seasonal Menu Released</h3>
+            <div class="date">October 10, 2024</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="S__4104214.jpg">
+          <div class="news-text">
+            <h3>Just the Two of Us</h3>
+            <div class="date">December 31, 2025</div>
+            <p>Try our brand new autumn-inspired menu featuring pumpkin spice pancakes and maple syrup delights. Available now in-store!</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="japsterdam-v0-wce4f5tx6k4e1.jpg">
+          <div class="news-text">
+            <h3>JAPSTERDAM!</h3>
+            <div class="date">June 3, 2014</div>
+            <p>The time has come to rise as one fandom under the glorious banner of Japsterdam! Let's spread our love for this unique, great and free nation, join the servers and other communities, together we can guarantee that the spirit of Japsterdam resonates on the Internet! Join the movement, and let's show the world the unstoppable power of the Japsterdam faithful. For the order! For stroopwafelsap ! For Japsterdam!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Buttercat Official.</p>
+    <p><a href="#">Privacy & Terms</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
